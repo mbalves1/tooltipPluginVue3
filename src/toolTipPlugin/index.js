@@ -1,13 +1,8 @@
-// const myFirstPlugin = {
-  // install(app, options) {
-    //console.log("Hello world", options);
-  //}
-//}
+import { defineAsyncComponent } from "vue";
 
- function myFirstPlugin(app, options) {
-  console.log("Hello world", options);
-}
-
-export {
-  myFirstPlugin
+export function toolTipPlugin(app, options) {
+  app.component(
+    "TooltipPlugin",
+    defineAsyncComponent(() => import("./TooltipPlugin.vue")))
+  console.log(options);
 }

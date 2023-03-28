@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { myFirstPlugin } from './toolTipPlugin'
+import { toolTipPlugin } from './toolTipPlugin'
 
 createApp(App)
-  .use(myFirstPlugin, {options: true})
+  .use(toolTipPlugin, {options: true})
   .mount('#app')
