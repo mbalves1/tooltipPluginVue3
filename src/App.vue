@@ -15,6 +15,10 @@
       :text="tooltiptext"
     />
   </span>
+
+  <br />
+
+  <button @click="$hideAllTooltips">Hide All</button>
 </template>
 
 <script setup>

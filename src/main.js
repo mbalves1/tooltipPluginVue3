@@ -4,6 +4,8 @@ import { toolTipPlugin } from './toolTipPlugin'
 
 createApp(App)
   .use(toolTipPlugin, {
-    placement: 'right'
+    placement: 'right',
+    trigger: "click",
+    hideOnClick: false
   })
   .mount('#app')
