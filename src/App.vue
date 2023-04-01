@@ -1,12 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <h2>Hover Over me <TooltipPlugin text="Hello World" /></h2>
+  <h3>
+    Custom Vue js 3 plugin  
+  </h3>
+  <input type="text" v-model="tooltiptext"> <br />
+  <span>Hover Over me
+    <TooltipPlugin
+      :text="tooltiptext"
+      :options="{placement: 'left'}"
+    />
+  </span>
+  <br />
+  <span>And me
+    <TooltipPlugin
+      :text="tooltiptext"
+    />
+  </span>
 </template>
 
-<script>
-export default {
-  name: 'App',
-}
+<script setup>
+import { ref } from "vue"
+
+const tooltiptext = ref("Hello World")
+
+
 </script>
 
 <style>

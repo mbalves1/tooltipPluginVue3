@@ -3,5 +3,7 @@ import App from './App.vue'
 import { toolTipPlugin } from './toolTipPlugin'
 
 createApp(App)
-  .use(toolTipPlugin, {options: true})
+  .use(toolTipPlugin, {
+    placement: 'right'
+  })
   .mount('#app')
